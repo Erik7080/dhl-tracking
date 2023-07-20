@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Brown", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 350;
+  line-height: 1.8;
+}
+
+.commands-area {
+  display: flex;
+}
+
+.commands-left-column,
+.commands-right-column,
+.commands-button {
+  margin: 0rem 1rem;
+}
+
+.error {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: red;
+  display: none;
+}
+
+#outputTextarea,
+#servicePoints {
+  background: gainsboro;
+}

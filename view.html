@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+  <title>DHL Tracking app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="logic/logic.js"></script>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <div class="introduction">
+    <h2>Welcome to DHL tracking page</h2>
+    <p>Please insert your tracking number below and API Key.</p>
+  </div>
+  <div class="commands-area">
+    <div class="commands-left-column">
+      <div class="commands-row">
+        <label class="command-label">Order number:</label>
+      </div>
+      <div class="commands-row">
+        <input name="command-textarea" id="trackingNumber" placeholder="Enter the order number" />
+        <br>
+        <input name="command-textarea" id="apiKey" placeholder="Enter the DHL API Key" />
+      </div>
+    </div>
+    <div class="commands-right-column">
+      <div class="commands-row">
+        <label class="command-label">Output result:</label>
+      </div>
+      <div class="commands-row">
+        <textarea name="command-output" id="outputTextarea" placeholder="Tracking info will be displayed here" readonly
+          disabled cols="55" rows="4"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="commands-button">
+    <input id="submitButton" class="submit-button" type="button" value="Submit details" onClick="getLastLocation()">
+  </div>
+  <div class="introduction">
+    <h3>Interested in finding the DHL service point locations?</h3>
+    <p>Please insert your Country code and City below. Radius is optional</p>
+  </div>
+  <div class="commands-area">
+    <div class="commands-left-column">
+      <div class="commands-row">
+        <label class="command-label">Country code:</label>
+      </div>
+      <div class="commands-row">
+        <input name="command-textarea" id="countryCode" placeholder="Enter the country code" />
+        <br>
+        <div class="commands-row">
+          <label class="command-label">City:</label>
+        </div>
+        <input name="command-textarea" id="city" placeholder="Latest locality" />
+        <div class="commands-row">
+          <label class="command-label">Radius:</label>
+        </div>
+        <input name="command-textarea" id="radius" placeholder="Latest locality" />
+      </div>
+    </div>
+    <div class="commands-right-column">
+      <div class="commands-row">
+        <label class="command-label">Service Points:</label>
+      </div>
+      <div class="commands-row">
+        <textarea name="command-output" id="servicePoints" placeholder="Service Point info will be displayed here"
+          readonly disabled cols="55" rows="4"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="commands-button">
+    <input id="submitButton" class="submit-button" type="button" value="Submit details" onClick="getServicePoint()">
+  </div>
+</body>
+
+</html>
